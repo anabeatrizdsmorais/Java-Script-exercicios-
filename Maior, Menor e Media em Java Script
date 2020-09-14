@@ -1,0 +1,47 @@
+
+            var array = [];
+            var indice = 0;
+            
+            var media = 0;
+            var soma = 0;
+            
+            var maior = 0;
+            var menor = 99999;
+
+            while(true){
+                var value = window.prompt('Informe uma nota ou digite -1 para sair:');
+                if(value == -1){
+                    break;
+                }
+                array[indice] = parseInt(value);
+                indice = indice + 1;
+            }
+            
+            //maior e menor nota
+
+            for(var i = 0; i < indice ; i ++){
+                if(array[i] > maior){
+                    maior = array[i];
+                } if (array[i] < menor){
+                    menor = array[i];
+                }
+            }
+            //console.log('numero maior: ', maior);
+            //console.log('numero menor: ', menor);
+            
+            alert('Maior nota: ' + maior);
+            alert('Menor nota: ' + menor);
+
+
+            //console.log(array)
+            
+            //media
+            for(var i = 0; i < indice; i++){
+                console.log(array[i]);
+                soma = soma + array[i];
+                //media = soma / (indice);
+
+            }
+            alert('A soma das notas: ' +soma);
+            media = soma / (indice);
+            alert('A media é ' + media);
