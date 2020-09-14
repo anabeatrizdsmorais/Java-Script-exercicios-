@@ -1,0 +1,32 @@
+var notas = [];
+var notas2 = [];
+var i = 0;
+
+	while(true){
+		var nota = parseFloat(window.prompt('Informe uma nota, ou digite -1 para sair.'));
+		
+		if(nota == -1){
+			break;
+		}
+		notas.push(nota);
+	}
+	
+	k = notas.length;
+	//invertendo
+	for (var i = 0; i < notas.length; i++) {
+		notas2[i] = notas[k]
+		k=k-1;
+	}
+
+	//mostrando original
+	alert('ORIGINAL no console.log');
+	for(var i=0; i < notas.length; i++){
+		console.log('Original: ', notas[i]);
+	}
+
+
+	//mostrando invertido
+	alert('INVERTIDO no console.log');
+	for(var i=0; i <= notas.length; i++){
+		console.log('Invertido: ', notas2[i]);
+	}
