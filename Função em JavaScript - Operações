@@ -1,0 +1,49 @@
+//function
+
+            function solicitarDados(mensagem){
+                return window.prompt(mensagem);
+            }
+
+            function somar(n1, n2){
+                return n1+n2;
+            }
+
+            function subtracao(n1,n2){
+                return n1 - n2;
+            }
+
+            function multi(n1,n2){
+                return n1 * n2;
+            }
+
+            function divisao(n1,n2){
+                if(n1 == 0 || n2 == 0)
+                    return "Não existe divisão por zero";
+                else
+                    return n1 / n2;
+            }
+
+            var op = solicitarDados('Informar uma operação: ');
+            var n1 = solicitarDados('Informar um numero: ');
+            var n2 = solicitarDados('Informar outro numero: ');
+            
+            if(op == 'soma' || op == '+'){
+                var res = somar(parseFloat(n1),parseFloat(n2));
+                console.log(n1 + ' + ' + n2 + ' = ', res);
+            }
+            
+            if(op == 'subtracao' || op == '-'){
+                var res = subtracao(parseFloat(n1),parseFloat(n2));
+                console.log(n1 + ' - ' + n2 + ' = ', res);
+            }
+
+            if(op == 'multiplicacao' || op == '*'){
+                var res = multi(parseFloat(n1),parseFloat(n2));
+                console.log(n1 + ' * ' + n2 + ' = ', res);
+            }
+            
+            if(op == 'divisao' || op == '/'){
+                var res = divisao(parseFloat(n1),parseFloat(n2));
+                console.log(n1 + ' / ' + n2 + ' = ', res);
+            }
+       
