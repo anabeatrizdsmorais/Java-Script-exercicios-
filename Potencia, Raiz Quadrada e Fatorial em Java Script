@@ -1,0 +1,67 @@
+
+    var n1 = 0;
+    var n2 = 0;
+    var op = '';
+    var resultado = 0;
+
+    n1 = parseInt(window.prompt('Informe um numero:'));
+    op = window.prompt('Informe um operador para a operação: ');
+    n2 = parseInt(window.prompt('Informe outro numero: '));
+
+    if(op == 'soma' || op == 'SOMA' || op == '+'){
+        resultado = n1+n2;
+    } else if(op == 'subtracao' || op == 'SUBTRACAO' || op == '-'){
+        resultado = n1-n2;
+    } else if(op == 'multiplicacao' || op == 'MULTIPLICACAO' ||  op == '*'){
+        resultado = n1*n2;
+    } else if(op == 'DIVISAO' || op == 'divisao' || op == '/'){
+        resultado = n1/n2;
+    }
+
+    alert('O resultado da operação é: ' + resultado);
+    
+    //potencia
+    alert('POTENCIAL');
+    var base = 0;
+    var expoente = 0;
+    base = parseInt(window.prompt('Informe numero da base: '));
+    expoente = parseInt(window.prompt('Informe o expoente: '));
+    
+    var resultado = Math.pow(base, expoente);
+    
+    if(expoente == 0 || base == 0){
+        resultado = 1;
+    }
+
+    alert(resultado);
+
+    //raiz quadrada
+    alert('RAIZ QUADRADA');
+    var numero = 0;
+    numero = parseInt(window.prompt('Informe numero para saber a raiz quadrada: '));
+    
+    var resultado = Math.sqrt(numero);
+    
+    if(numero == 1){
+        resultado = 1;
+    }
+
+    alert('RAIZ QUADRADA: ' + resultado);
+
+    
+    //fatorial
+    alert('FATORIAL');
+    var n = 0;
+    var fat = 0;
+    var i = 0;
+    var c = 0;
+    
+    n = parseInt(window.prompt('Informe outro numero para fatorial!: '));
+    //n!
+    //i = 1; i > 1; n--
+    for(fat = 1; n > 1; n--){
+        fat = fat * n;
+    }
+
+    //console.log(fat);
+    alert('Fatorial: ' + fat);
